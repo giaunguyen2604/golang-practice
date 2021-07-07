@@ -1,0 +1,14 @@
+@baseURL = http://127.0.0.1:3000 
+
+# login
+POST {{baseURL}}/login HTTP/1.1
+content-type: application/json
+
+{
+  "Username": "Admin",
+  "Password": "112233"
+}
+
+###
+
+GET {{baseURL}}/
