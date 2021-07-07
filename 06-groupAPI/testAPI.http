@@ -1,0 +1,33 @@
+@baseURL = http://127.0.0.1:3000 
+
+# login
+POST {{baseURL}}/login HTTP/1.1
+content-type: application/json
+Authorization: Basic QWRtaW46cGFzc3dvcmQ=
+
+{
+  "Username": "Admin",
+  "Password": "password"
+}
+
+###
+
+GET {{baseURL}}/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNjI1OTExODIzLCJ1c2VybmFtZSI6IkFkbWluIn0.krZOfLe_WOnloBS_dc1Klls6DqSJbAfL9tMLfyZTCQ8
+
+
+###
+GET {{baseURL}}/admin
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhZG1pbiI6dHJ1ZSwiZXhwIjoxNjI1OTE5MDE2LCJ1c2VybmFtZSI6IkFkbWluIn0.jYNcpGngiEwqyGXSwSt7is25mS_SuHu1g0QaX2tOjvM
+
+###
+GET {{baseURL}}/v2/hello
+
+###
+GET {{baseURL}}/user/add
+
+###
+GET {{baseURL}}/user/update
+
+###
+GET {{baseURL}}/user/delete
